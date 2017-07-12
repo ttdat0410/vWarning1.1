@@ -119,10 +119,10 @@
 		B0073A851F04FB0C0095D5DE = {
 			isa = PBXGroup;
 			children = (
-				B0073A901F04FB0C0095D5DE /* vBTSv2.1 */,
-				B0073A8F1F04FB0C0095D5DE /* Products */,
-				65439949C8E8B58133E48838 /* Pods */,
 				7E582ADFFF09865657FEA3A2 /* Frameworks */,
+				65439949C8E8B58133E48838 /* Pods */,
+				B0073A8F1F04FB0C0095D5DE /* Products */,
+				B0073A901F04FB0C0095D5DE /* vBTSv2.1 */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,14 +137,13 @@
 		B0073A901F04FB0C0095D5DE /* vBTSv2.1 */ = {
 			isa = PBXGroup;
 			children = (
-				B0F7F6261F15FD7E00AD3608 /* demoGroup */,
 				B0F7F6241F15FBF300AD3608 /* Groups */,
 				B0073AA81F04FBA80095D5DE /* Utils */,
 				B0073A911F04FB0C0095D5DE /* AppDelegate.swift */,
-				B0073A951F04FB0C0095D5DE /* Main.storyboard */,
 				B0073A981F04FB0C0095D5DE /* Assets.xcassets */,
-				B0073A9A1F04FB0C0095D5DE /* LaunchScreen.storyboard */,
 				B0073A9D1F04FB0C0095D5DE /* Info.plist */,
+				B0073A9A1F04FB0C0095D5DE /* LaunchScreen.storyboard */,
+				B0073A951F04FB0C0095D5DE /* Main.storyboard */,
 				B0F7F5E81F1387DE00AD3608 /* vBTSv2.1-Bridging-Header.h */,
 			);
 			path = vBTSv2.1;
@@ -153,14 +152,14 @@
 		B0073AA81F04FBA80095D5DE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				B086987C1F1319FB0053F229 /* SharePreference */,
-				B05E38DB1F074EF800E1F4CD /* Save */,
-				B05E38D41F07415000E1F4CD /* Toast */,
-				B05E38CD1F06331800E1F4CD /* Hud */,
 				B05E38CC1F06330500E1F4CD /* Extension */,
+				B05E38CD1F06331800E1F4CD /* Hud */,
 				B05E38C91F05EB3400E1F4CD /* Keyboard */,
+				B05E38DB1F074EF800E1F4CD /* Save */,
+				B086987C1F1319FB0053F229 /* SharePreference */,
+				B05E38D41F07415000E1F4CD /* Toast */,
 			);
-			name = Utils;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		B05E38C91F05EB3400E1F4CD /* Keyboard */ = {
@@ -168,7 +167,7 @@
 			children = (
 				B05E38CA1F05EB4F00E1F4CD /* Keyboard.swift */,
 			);
-			name = Keyboard;
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 		B05E38CC1F06330500E1F4CD /* Extension */ = {
@@ -176,7 +175,7 @@
 			children = (
 				B0073AA91F04FBB60095D5DE /* Extension.swift */,
 			);
-			name = Extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		B05E38CD1F06331800E1F4CD /* Hud */ = {
@@ -184,7 +183,7 @@
 			children = (
 				B05E38CE1F06335E00E1F4CD /* Hud.swift */,
 			);
-			name = Hud;
+			path = Hud;
 			sourceTree = "<group>";
 		};
 		B05E38D41F07415000E1F4CD /* Toast */ = {
@@ -192,76 +191,76 @@
 			children = (
 				B05E38D21F073DC200E1F4CD /* Toast.swift */,
 			);
-			name = Toast;
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		B05E38DB1F074EF800E1F4CD /* Save */ = {
 			isa = PBXGroup;
 			children = (
-				B0073AAF1F04FED10095D5DE /* SaveText.swift */,
-				B0073AB11F04FF520095D5DE /* SaveImage.swift */,
 				B0073AB31F0501770095D5DE /* SaveColor.swift */,
+				B0073AB11F04FF520095D5DE /* SaveImage.swift */,
+				B0073AAF1F04FED10095D5DE /* SaveText.swift */,
 				B05E38DC1F074F1100E1F4CD /* Tag.swift */,
 			);
-			name = Save;
+			path = Save;
 			sourceTree = "<group>";
 		};
 		B06585291F0DEFC7000DC563 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				B08698851F1331920053F229 /* Services */,
 				B065852F1F0DF01E000DC563 /* Models */,
 				B065852E1F0DF015000DC563 /* Presenters */,
+				B08698851F1331920053F229 /* Services */,
 				B065852D1F0DF008000DC563 /* ViewControllers */,
 				B065852C1F0DF001000DC563 /* Views */,
 			);
-			name = Modules;
+			path = Modules;
 			sourceTree = "<group>";
 		};
 		B065852C1F0DF001000DC563 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B0F7F5FD1F14DB5D00AD3608 /* Warning */,
 				B06585301F0DF029000DC563 /* Login */,
+				B0F7F5FD1F14DB5D00AD3608 /* Warning */,
 			);
-			name = Views;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B065852D1F0DF008000DC563 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B0F7F5FA1F14D53F00AD3608 /* Warning */,
 				B06585311F0DF032000DC563 /* Login */,
+				B0F7F5FA1F14D53F00AD3608 /* Warning */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B065852E1F0DF015000DC563 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				B0F7F6051F14E3D700AD3608 /* Warning */,
 				B06585321F0DF038000DC563 /* Login */,
+				B0F7F6051F14E3D700AD3608 /* Warning */,
 			);
-			name = Presenters;
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		B065852F1F0DF01E000DC563 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B0F7F6081F14E41700AD3608 /* Warning */,
 				B06585331F0DF03E000DC563 /* Login */,
+				B0F7F6081F14E41700AD3608 /* Warning */,
 			);
-			name = Models;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B06585301F0DF029000DC563 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				B06585D31F107885000DC563 /* LoginCell.swift */,
 				B06585C71F0F8AAF000DC563 /* LoginView.swift */,
 				B06585C91F0F8ABE000DC563 /* LoginViewDelegate.swift */,
-				B06585D31F107885000DC563 /* LoginCell.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B06585311F0DF032000DC563 /* Login */ = {
@@ -269,7 +268,7 @@
 			children = (
 				B06585CB1F0F8ACC000DC563 /* LoginViewController.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B06585321F0DF038000DC563 /* Login */ = {
@@ -278,7 +277,7 @@
 				B06585CD1F0F8AD6000DC563 /* LoginPresenter.swift */,
 				B036C87A1F09576C004A4101 /* Status.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B06585331F0DF03E000DC563 /* Login */ = {
@@ -287,7 +286,7 @@
 				B06585CF1F0F8AE1000DC563 /* LoginModel.swift */,
 				B06585D11F0F8AEB000DC563 /* LoginModelDelegate.swift */,
 			);
-			name = Login;
+			path = Login;
 			sourceTree = "<group>";
 		};
 		B086987C1F1319FB0053F229 /* SharePreference */ = {
@@ -295,17 +294,17 @@
 			children = (
 				B086987D1F131A1B0053F229 /* Save+Read.swift */,
 			);
-			name = SharePreference;
+			path = SharePreference;
 			sourceTree = "<group>";
 		};
 		B08698851F1331920053F229 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B08698871F1335340053F229 /* ServerManagerRequestRouter.swift */,
 				B086988E1F1378860053F229 /* ServerManager.swift */,
+				B08698871F1335340053F229 /* ServerManagerRequestRouter.swift */,
 				B0F7F5EE1F1397F400AD3608 /* StatusCode.swift */,
 			);
-			name = Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B0F7F5FA1F14D53F00AD3608 /* Warning */ = {
@@ -313,18 +312,18 @@
 			children = (
 				B0F7F6111F15BA7D00AD3608 /* WarningViewController.swift */,
 			);
-			name = Warning;
+			path = Warning;
 			sourceTree = "<group>";
 		};
 		B0F7F5FD1F14DB5D00AD3608 /* Warning */ = {
 			isa = PBXGroup;
 			children = (
 				B0F7F6011F14DC0F00AD3608 /* BaseCell.swift */,
+				B0F7F61B1F15C01300AD3608 /* WarningLoadView.swift */,
 				B0F7F60F1F15BA4F00AD3608 /* WarningView.swift */,
 				B0F7F6191F15BBC600AD3608 /* WarningViewDelegate.swift */,
-				B0F7F61B1F15C01300AD3608 /* WarningLoadView.swift */,
 			);
-			name = Warning;
+			path = Warning;
 			sourceTree = "<group>";
 		};
 		B0F7F6051F14E3D700AD3608 /* Warning */ = {
@@ -332,18 +331,18 @@
 			children = (
 				B0F7F6131F15BAAC00AD3608 /* WarningPresenter.swift */,
 			);
-			name = Warning;
+			path = Warning;
 			sourceTree = "<group>";
 		};
 		B0F7F6081F14E41700AD3608 /* Warning */ = {
 			isa = PBXGroup;
 			children = (
+				B0F7F61F1F15D05D00AD3608 /* Loader.swift */,
 				B0F7F6151F15BAD600AD3608 /* WarningModel.swift */,
 				B0F7F6171F15BAED00AD3608 /* WarningModelDelegate.swift */,
 				B0F7F61D1F15CC4A00AD3608 /* WarningObj.swift */,
-				B0F7F61F1F15D05D00AD3608 /* Loader.swift */,
 			);
-			name = Warning;
+			path = Warning;
 			sourceTree = "<group>";
 		};
 		B0F7F6241F15FBF300AD3608 /* Groups */ = {
@@ -351,16 +350,8 @@
 			children = (
 				B06585291F0DEFC7000DC563 /* Modules */,
 			);
-			name = Groups;
+			path = Groups;
 			sourceTree = "<group>";
-		};
-		B0F7F6261F15FD7E00AD3608 /* demoGroup */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = demoGroup;
-			path = ../../../../Users/dattrantien/Documents/iOSApp/vWarning/vWarning1.1/vWarning/vBTSv2.1;
-			sourceTree = DEVELOPER_DIR;
 		};
 /* End PBXGroup section */
 
@@ -528,6 +519,7 @@
 				B0073A961F04FB0C0095D5DE /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		B0073A9A1F04FB0C0095D5DE /* LaunchScreen.storyboard */ = {
@@ -536,6 +528,7 @@
 				B0073A9B1F04FB0C0095D5DE /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
