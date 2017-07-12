@@ -27,18 +27,18 @@ class WarningObj: NSObject {
     var time            : String = ""
     var createdTime     : String = ""
     var sensorName      : String = ""
-    var sensorTypeId    : String = ""
-    var warningValue1   : String = ""
-    var warningValue2   : String = ""
-    var warningComp     : String = ""
-    var originalValue   : String = ""
-    var value           : String = ""
+    var sensorTypeId    : Int = -1
+    var warningValue1   : Int = -1
+    var warningValue2   : Int = -1
+    var warningComp     : Int = -1
+    var originalValue   : Int = -1
+    var value           : Int = -1
     
     override init () {
         super.init()
     }
     
-    convenience init(time: String, createdTime: String, sensorName: String, sensorTypeId: String, warningValue1: String, warningValue2: String, warningComp: String, originalValue: String, value: String) {
+    convenience init(time: String, createdTime: String, sensorName: String, sensorTypeId: Int, warningValue1: Int, warningValue2: Int, warningComp: Int, originalValue: Int, value: Int) {
         
         self.init()
         

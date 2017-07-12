@@ -24,11 +24,8 @@ struct ServerManaer {
         }
         
         case getTypeAccount()
-        case doLogin(String, String)
-        case getAllStation()
-        case getOneStation()
-        case getChart()
-        case getWarning(String, String, String)
+        case doLogin(String, String)                    // username + password
+        case getWarning(String, String)                 // gatewaySerial + count
         
         
 // ######### METHOD
@@ -44,8 +41,6 @@ struct ServerManaer {
             case .getWarning:
                 return .GET
             
-            default:
-                return .GET
             }
             
         }
@@ -60,13 +55,10 @@ struct ServerManaer {
             case .doLogin:
                 return "/apikey/login"
                 
-            case .getWarning(let gatewaySerial, _,_):
-                return "/report/warning/\(Router.userId)/\(gatewaySerial)"
+            case .getWarning(let gatewaySerial, _ ):
+                return "report/warning/getLast/\(Router.userId)/\(gatewaySerial)"
                 
-            default:
-                return ""
             }
-            
         }
         
 // ######### PARAMETER
@@ -77,15 +69,13 @@ struct ServerManaer {
                 let params = ["username": username, "password": password.sha1()]
                 return params
                 
-            case .getWarning( _ , let beginDateTime, let endDateTime):
-                let params = ["beginDateTime": beginDateTime, "endDateTime": endDateTime]
+            case .getTypeAccount:
+                return [:]
+                
+            case .getWarning( _ , let count):
+                let params = ["count": count]
                 return params
-                
-            case .getAllStation:
-                return [:]
-                
-            default:
-                return [:]
+            
             }
             
         }
@@ -94,16 +84,13 @@ struct ServerManaer {
         var URLRequest: NSMutableURLRequest {
             
             let result: (path: String, parameters: [String: AnyObject]) = {
-            
                 return (path, parammeters)
-            
             }()
             
             let URL = NSURL(string: Router.baseURL)!
             let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(result.path))
             mutableURLRequest.setValue(Router.apiKey, forHTTPHeaderField: "API_KEY")
             mutableURLRequest.HTTPMethod = method.rawValue
-            print (mutableURLRequest)
             return Alamofire.ParameterEncoding.URL.encode(mutableURLRequest, parameters: result.parameters).0
             
         }

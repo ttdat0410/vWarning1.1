@@ -29,11 +29,22 @@ class WarningModel: NSObject {
         super.init()
     }
     
-    func loadWarning(gatewaySerial: String, beginDateTime: String, endDateTime: String, success: LoadWarningSuccess, failure: LoadWarningFailure) {
+    func loadWarning(gatewaySerial: String, count: String, success: LoadWarningSuccess, failure: LoadWarningFailure) {
         
-        Loader.executeWarningRequest(gatewaySerial, beginDateTime: beginDateTime, endDateTime: endDateTime, success: { (warnings) -> (Void) in
+        if(updateStatus == .Idle) {
+            updateStatus = .Loading
+        }
+        
+        Loader.executeWarningRequest(gatewaySerial, count: count, success: { (warnings) -> (Void) in
+            
+            self.warnings = warnings
+            self.updateStatus = .Idle
+            success?()
             
             }) { (error) -> (Void) in
+                
+                self.updateStatus = .Idle
+                failure?(error: error)
                 
         }
         
@@ -46,18 +57,22 @@ extension WarningModel: WarningModelDelegate {
     func getWarning() -> NSArray {
         
         if (self.warnings.count > 0) {
+            
             return self.warnings
         }
         let semaphone = dispatch_semaphore_create(0) as dispatch_semaphore_t
         
-        self.loadWarning("GW170614", beginDateTime: "2017-06-15 00:00:00", endDateTime: "2017-06-15 23:59:59", success: { () -> (Void) in
+        self.loadWarning("GW170614", count: "10", success: { () -> (Void) in
+            
             dispatch_semaphore_signal(semaphone)
+            
             }) { (error) -> (Void) in
+                
                 dispatch_semaphore_signal(semaphone)
+                
         }
         
         dispatch_semaphore_wait(semaphone, DISPATCH_TIME_FOREVER)
-        
         return self.warnings
     }
     

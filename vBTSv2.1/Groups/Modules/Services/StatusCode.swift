@@ -9,12 +9,12 @@
 
 enum StatusCode: Int {
     
-    case DEFAULT = 0
-    case SUCCESS = 1
-    case USERSER_OR_PASSWORD_IS_INCORRECT = 9
-    case FAILURE = 0x07
-    
-    case ADMIN      = 505
-    case OPERATOR   = 515
+    case DEFAULT                                = 0
+    case SUCCESS                                = 1
+    case PERMISSION_DENIED                      = 5
+    case USERSER_OR_PASSWORD_IS_INCORRECT       = 9
+    case FAILURE                                = 0x07
+    case ADMIN                                  = 505
+    case OPERATOR                               = 515
     
 }

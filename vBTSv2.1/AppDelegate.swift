@@ -19,6 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window?.makeKeyAndVisible()
 
+//        UINavigationBar.appearance().barStyle = .BlackTranslucent
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+//        UINavigationBar.appearance().bar
+        
+//        UIToolbar.appearance().barStyle = .BlackTranslucent
+//        UITabBar.appearance().barStyle = .Black
+//        UITabBar.appearance().translucent = true
+//        UITabBar.appearance().tintColor = UIColor.whiteColor()
+//        
+//        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+//        
+//        UIButton.appearance().tintColor = UIColor.whiteColor()
+        
         let loginViewController = LoginViewController()
         window?.rootViewController = loginViewController
         

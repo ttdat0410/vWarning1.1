@@ -38,4 +38,6 @@ class SaveText: NSObject {
     
     static let FONT_OF_COMMON   : String = "AppleSDGothicNeo-Medium"
     
+    static let FONT_OF_COMMON_BOLD : String = "AppleSDGothicNeo-Medium-Bold"
+    
 }

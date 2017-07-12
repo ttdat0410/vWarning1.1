@@ -24,14 +24,14 @@ class LoginViewController: UIViewController, UIPopoverPresentationControllerDele
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.presenter?.showKeyboard()
+//        self.presenter?.showKeyboard()
         
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.presenter?.hiddenKeyboard()
+//        self.presenter?.hiddenKeyboard()
     }
     
     private func setupLoginView() {

@@ -12,10 +12,12 @@ class WarningViewController: UICollectionViewController, UICollectionViewDelegat
     
     private var presenter: WarningPresenter?
     
+    private var arrayDataSource: ArrayDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupView()
+        view.backgroundColor = UIColor.whiteColor()
         setupNavigation()
         
         self.presenter = WarningPresenter.init(model: WarningModel(), view: self)
@@ -28,9 +30,6 @@ class WarningViewController: UICollectionViewController, UICollectionViewDelegat
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             self.presenter?.displayViewFromWarningModel()
         }
-        
-        
-        
     }
     
     func setupView() {
@@ -47,39 +46,39 @@ class WarningViewController: UICollectionViewController, UICollectionViewDelegat
         navigationItem.title = "W"
         let out = UIBarButtonItem(title: "out", style: .Plain, target: self, action: #selector(WarningViewController.handleOut))
         navigationItem.leftBarButtonItems = [out]
+        navigationController?.navigationBar.barTintColor = SaveColor.BACKGROUND
         
-    }
-    
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
-    }
-    
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("a", forIndexPath: indexPath) as! WarningView
-        
-        cell.backgroundColor = SaveColor.BACKGROUND
-        
-        return cell
-        
-    }
-    
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-        return CGSizeMake(view.frame.width, 100)
     }
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
-        return 5.0
-    }
-    
 }
 
 extension WarningViewController: WarningViewDelegate {
     
     func displayWarning(warnings: NSArray) {
         
-        print (3)   
+        dispatch_async(dispatch_get_main_queue()) {
+            
         
+        
+        self.setupView()
+        let arrayDataSource = ArrayDataSource(items: warnings as! Array<NSObject>, cellIdentifier: "a", configureCellBlock: { (cell , item) -> Void in
+            
+            if let ce = cell as? WarningView {
+                
+                if let it = item as? WarningObj {
+                    ce.updateCell(it.sensorName, dateTime: it.createdTime)
+                }
+            }
+            
+        }) { (cell, item) -> Void in
+            
+        }
+        self.arrayDataSource            = arrayDataSource
+        self.collectionView!.delegate     = arrayDataSource
+        self.collectionView!.dataSource   = arrayDataSource
+        self.collectionView!.reloadData()
+
+        }
     }
     
 }

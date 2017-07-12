@@ -51,8 +51,6 @@ extension LoginModel: LoginModelDelegate {
                         SharePreference.doSave("username", value: username)
                         SharePreference.doSave("password", value: password)
                         
-                        
-                        
                         Alamofire.request(ServerManaer.Router.getTypeAccount()).responseJSON(completionHandler: { (response) in
                             
                             switch response.result {
@@ -85,7 +83,6 @@ extension LoginModel: LoginModelDelegate {
                         complete?(complete: .USERSER_OR_PASSWORD_IS_INCORRECT)
                         
                     }
-                    
                 })
                 
             case .Failure(let err):

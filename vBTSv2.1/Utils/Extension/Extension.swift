@@ -63,7 +63,7 @@ extension UIViewController {
         transition.subtype = kCATransitionFromRight
         transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         view.window!.layer.addAnimation(transition, forKey: kCATransition)
-        presentViewController(viewControllerToPresent, animated: true, completion: nil)
+        presentViewController(viewControllerToPresent, animated: false, completion: nil)
     }
     
     func dismissViewController() {

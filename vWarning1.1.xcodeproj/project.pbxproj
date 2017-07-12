@@ -42,6 +42,7 @@
 		B0F7F61C1F15C01300AD3608 /* WarningLoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7F61B1F15C01300AD3608 /* WarningLoadView.swift */; };
 		B0F7F61E1F15CC4A00AD3608 /* WarningObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7F61D1F15CC4A00AD3608 /* WarningObj.swift */; };
 		B0F7F6201F15D05D00AD3608 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7F61F1F15D05D00AD3608 /* Loader.swift */; };
+		B0F7F6311F162D8D00AD3608 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F7F6301F162D8D00AD3608 /* ArrayDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		B0F7F61B1F15C01300AD3608 /* WarningLoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarningLoadView.swift; sourceTree = "<group>"; };
 		B0F7F61D1F15CC4A00AD3608 /* WarningObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WarningObj.swift; sourceTree = "<group>"; };
 		B0F7F61F1F15D05D00AD3608 /* Loader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		B0F7F6301F162D8D00AD3608 /* ArrayDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
 		C7CC13E58E93A392215055D3 /* Pods_vBTSv2_1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_vBTSv2_1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -213,6 +215,7 @@
 				B08698851F1331920053F229 /* Services */,
 				B065852D1F0DF008000DC563 /* ViewControllers */,
 				B065852C1F0DF001000DC563 /* Views */,
+				B0F7F6301F162D8D00AD3608 /* ArrayDataSource.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -502,6 +505,7 @@
 				B0F7F6101F15BA4F00AD3608 /* WarningView.swift in Sources */,
 				B0F7F61E1F15CC4A00AD3608 /* WarningObj.swift in Sources */,
 				B06585C81F0F8AAF000DC563 /* LoginView.swift in Sources */,
+				B0F7F6311F162D8D00AD3608 /* ArrayDataSource.swift in Sources */,
 				B0F7F6201F15D05D00AD3608 /* Loader.swift in Sources */,
 				B0F7F61A1F15BBC600AD3608 /* WarningViewDelegate.swift in Sources */,
 				B086987E1F131A1B0053F229 /* Save+Read.swift in Sources */,
